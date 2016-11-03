@@ -1,0 +1,40 @@
+#intro{
+	/*background: url('../img/lh.jpg');*/
+	background-repeat: no-repeat;
+
+}
+
+.navbar{
+	background: #fff url('../img/border.jpg');
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.float_l{
+	float: left;
+}
+
+.float_r{
+	float: right;
+}
+
+.img_materi{
+	width: 160px;
+	margin-right: 10px;
+}
+
+.ebuk{
+	padding: 10px;
+}
+
+.ebuk img{
+	width: 120px;
+}
+
+.contact-section{
+	color: white;
+}
+
+.pagination li{
+	cursor: pointer;
+}
