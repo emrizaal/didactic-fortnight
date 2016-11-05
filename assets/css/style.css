@@ -25,10 +25,17 @@
 
 .ebuk{
 	padding: 10px;
+	margin-right: 20px;
 }
 
 .ebuk img{
 	width: 120px;
+}
+
+.ebuk table tr td{
+	*border: 1px solid black;
+	text-align: center;
+	padding: 10px;
 }
 
 .contact-section{

@@ -1,22 +1,27 @@
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-1">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="col-md-2">
                 <img src="<?=base_url()?>assets/img/logo.png">
             </div>
-            <div class="col-md-4" align="left">
-                DKM LUQMANUL HAKIM
-                <br>
-                Jl. Gegerkalong Hilir, Desa Ciwaruga, Jawa Barat 40012
-                <br>
-                Telp : 08723618xxxx
-                <br>
-                emrizal21@gmail.com
-                <br>
-                <sub>copyright @2016</sub>
-            </div>
+			<div class="col-md-3">
+				<i class="glyphicon glyphicon-map-marker" style="font-size: 20px; margin-bottom: 10px;"></i><br>
+				DKM LUQMANUL HAKIM<br>Jl. Gegerkalong Hilir, Desa Ciwaruga, Jawa Barat 40012
+			</div>
+			<div class="col-md-3">
+				<i class="glyphicon glyphicon-phone-alt" style="font-size: 20px; margin-bottom: 10px"></i><br>
+				Telp  : 08723618xxxx<br>
+				E-Mail: emrizal21@gmail.com
+			</div>
+			<div class="col-md-4">
+				Didukung oleh:<br><br>
+				<img src="<?=base_url()?>assets/img/logo_assalam.png" height="70px" title="Assalam POLBAN" />&emsp;<img src="<?=base_url()?>assets/img/polban.png" height="75px" title="POLBAN" />&emsp;<img src="<?=base_url()?>assets/img/ruki.png" height="70px" title="Ruki">
+			</div>
         </div>
+		<div class="col-md-12" style="margin-top: 20px;">
+			
+		</div>
     </div>
 </section>
 

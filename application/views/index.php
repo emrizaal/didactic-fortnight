@@ -13,12 +13,12 @@ include "header.php";
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src="<?=base_url()?>assets/img/to.png" height="50px" style="margin-top:-19px;"/></a>
+                <a class="navbar-brand page-scroll" href="#page-top"><img src="<?=base_url()?>assets/img/to.png" height="50px" style="margin-top:-18px;"/></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav pull-right">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
@@ -34,16 +34,22 @@ include "header.php";
                     </li>
 
                 </ul>
-                <ul class="nav navbar-nav pull-right">
+                <!--<ul class="nav navbar-nav pull-right">
                    <?php
-                   if($this->session->userdata('username')==""){
+                   //if($this->session->userdata('username')==""){
                     ?>
                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Login
                         <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <form action="<?=base_url()?>main/auth" method="POST">
                                 <li style="padding: 5px 10px;">
-                                    <input type="text" name="username" placeholder="Username" class="form-control">
+									<table>
+										<tr>
+											<td><i class="fa fa-user-circle fa-lg"></i></td>
+											<td>&emsp;</td>
+											<td><input type="text" name="username" placeholder="Username" class="form-control" size="25"></td>
+										</tr>
+									</table>
                                 </li>
                                 <li style="padding: 5px 10px;">
                                     <input type="password" placeholder="Password" class="form-control" name="password">
@@ -55,8 +61,8 @@ include "header.php";
                         </ul>
                     </li>
                 </ul>
-                <?php
-            }else{
+                <?php 
+            //}else{
                 ?>
                 <li>
                     <a href="<?=base_url()?>main/daftar_tausiyah">Daftar Tausiyah</a>
@@ -66,9 +72,9 @@ include "header.php";
                 </li>
                 <li>
                     <a href="#">Logout</a>
-                </li>
+                </li>-->
                 <?php 
-            }
+            //}
             ?>
         </div>
         <!-- /.navbar-collapse -->
@@ -79,8 +85,8 @@ include "header.php";
 <section id="intro" class="intro-section">
     <div class="container-fluid">
         <div class="row">
-           <div class="col-md-9" style="margin-top:-60px;padding:0px;">
-               <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:568px;">
+           <div class="col-md-12" style="margin-top:-60px;padding:0px;">
+               <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:580px;">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -92,16 +98,32 @@ include "header.php";
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="<?=base_url()?>assets/img/newlh.jpg" alt="Chania" style="height:568px;width:1011px">
+                        <img src="<?=base_url()?>assets/img/newlh.jpg" alt="Chania" style="height:580px;width:1411px">
+						<div class="carousel-caption">
+							<h3>CAPTION TITLE</h3>
+							<p>Caption text</p>
+						</div>
                     </div>
                     <div class="item">
-                        <img src="<?=base_url()?>assets/img/newlh.jpg" alt="Chania" style="height:568px;width:1011px">
+                        <img src="<?=base_url()?>assets/img/newlh.jpg" alt="Chania" style="height:580px;width:1411px">
+						<div class="carousel-caption">
+							<h3>CAPTION TITLE</h3>
+							<p>Caption text</p>
+						</div>
                     </div>
                     <div class="item">
-                        <img src="<?=base_url()?>assets/img/newlh.jpg" alt="Chania" style="height:568px;width:1011px">
+                        <img src="<?=base_url()?>assets/img/newlh.jpg" alt="Chania" style="height:580px;width:1411px">
+						<div class="carousel-caption">
+							<h3>CAPTION TITLE</h3>
+							<p>Caption text</p>
+						</div>
                     </div>
                     <div class="item">
-                        <img src="<?=base_url()?>assets/img/newlh.jpg" alt="Chania" style="height:568px;width:1011px">
+                        <img src="<?=base_url()?>assets/img/newlh.jpg" alt="Chania" style="height:580px;width:1411px">
+						<div class="carousel-caption">
+							<h3>CAPTION TITLE</h3>
+							<p>Caption text</p>
+						</div>
                     </div>
 
                 </div>
@@ -117,7 +139,7 @@ include "header.php";
                 </a>
             </div>
         </div>
-        <div class="col-md-3">
+        <!--<div class="col-md-3">
            <img src="<?=base_url()?>assets/img/logo.png" /><br>
            <h1>DKM LUQMANUL HAKIM</h1>
            <br>
@@ -125,15 +147,15 @@ include "header.php";
            <br><br><br>
            <b>Didukung oleh :</b>
            <br><br>
-           <img src="<?=base_url()?>assets/img/assalam.jpg" height="70px" /> <img src="<?=base_url()?>assets/img/polban.jpg" height="75px" /> <img src="<?=base_url()?>assets/img/ruki.png" height="70px">
-       </div>
+           <img src="<?//=base_url()?>assets/img/assalam.jpg" height="70px" /> <img src="<?=base_url()?>assets/img/polban.jpg" height="75px" /> <img src="<?//=base_url()?>assets/img/ruki.png" height="70px">
+       </div>-->
    </div>
 </div>
 </section>
 
 <!-- About Section -->
 <section id="jadwal" class="about-section">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-lg-3">
                 <div class="panel panel-primary">
@@ -166,13 +188,86 @@ include "header.php";
 </section>
 
 <!-- Services Section -->
-<section id="materi" class="services-section">
-    <div class="container-fluid" align="left">
+<section id="materi" class="services-section-book">
+	<div class="container">
+	<div class="row">
+	 <div class="col-md-12">
+            <h2 align="center">E-Book</h2><br>
+            <div align="center" style="margin-left:25px;">
+                <div class="float_l ebuk">
+                    <table>
+						<tr>
+							<td><img src="<?=base_url()?>assets/img/book1.png"/></td>
+						<tr>
+						</tr>
+							<td><button class="btn btn-success">Download</button></td>
+						</tr>
+					</table>
+                </div>
+                <div class="float_l ebuk">
+                    <table>
+						<tr>
+							<td><img src="<?=base_url()?>assets/img/book2.png"/></td>
+						<tr>
+						</tr>
+							<td><button class="btn btn-success">Download</button></td>
+						</tr>
+					</table>
+                </div>
+                <div class="float_l ebuk">
+                    <table>
+						<tr>
+							<td><img src="<?=base_url()?>assets/img/book3.png"/></td>
+						<tr>
+						</tr>
+							<td><button class="btn btn-success">Download</button></td>
+						</tr>
+					</table>
+                </div>
+                <div class="float_l ebuk">
+                    <table>
+						<tr>
+							<td><img src="<?=base_url()?>assets/img/book4.png"/></td>
+						<tr>
+						</tr>
+							<td><button class="btn btn-success">Download</button></td>
+						</tr>
+					</table>
+                </div>
+                <div class="float_l ebuk">
+                    <table>
+						<tr>
+							<td><img src="<?=base_url()?>assets/img/book5.png"/></td>
+						<tr>
+						</tr>
+							<td><button class="btn btn-success">Download</button></td>
+						</tr>
+					</table>
+                </div>
+                <div class="float_l ebuk">
+                    <table>
+						<tr>
+							<td><img src="<?=base_url()?>assets/img/book1.png"/></td>
+						<tr>
+						</tr>
+							<td><button class="btn btn-success">Download</button></td>
+						</tr>
+					</table>
+                </div>
+				
+            </div>
+        </div>
+	 </div>
+	</div>
+</section>
+
+<section class="services-section-materi">
+    <div class="container" align="left">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12">
             <!--
                 <div>
-                    <img src="<?=base_url()?>assets/img/natal.jpg" class="float_l img_materi">
+                    <img src="<?//=base_url()?>assets/img/natal.jpg" class="float_l img_materi">
                     <h4><b>Hukum Memberi Ucapan Natal</b></h4>
                     <sup><i>Jumat, 1 Januari 2016 | oleh : Dr. Aam Amiruddin</i><br></sup>
                     <p align="justify">
@@ -182,7 +277,7 @@ include "header.php";
                     <hr>
                 </div>
                 <div>
-                    <img src="<?=base_url()?>assets/img/kiblat.jpg" class="float_l img_materi">
+                    <img src="<?//=base_url()?>assets/img/kiblat.jpg" class="float_l img_materi">
                     <h4><b>Tak Tahu Arah Kiblat Ketika Shalat</b></h4>
                     <sup><i>Jumat, 1 Januari 2016 | oleh : Dr. Aam Amiruddin</i><br></sup>
                     <p align="justify">
@@ -197,7 +292,7 @@ include "header.php";
                     <hr>
                 </div>
                 <div>
-                    <img src="<?=base_url()?>assets/img/ortu.jpg" class="float_l img_materi">
+                    <img src="<?//=base_url()?>assets/img/ortu.jpg" class="float_l img_materi">
                     <h4><b> 
                         Berbakti Kepada Ortu yang telah Wafat</b></h4>
                         <sup><i>Jumat, 1 Januari 2016 | oleh : Dr. Aam Amiruddin</i><br></sup>
@@ -218,7 +313,7 @@ include "header.php";
                     include "v_materi.php";
                     ?>
                 </div>
-                <div align="center" style="margin-top:-20px;">
+                <div align="right" style="margin-top:-20px;">
                     <ul class="pagination">
                       <li value="1" class="active"><a>1</a></li>
                       <li value="2"><a>2</a></li>
@@ -228,32 +323,9 @@ include "header.php";
                   </ul>
               </div>
           </div>
-          <div class="col-md-5">
-            <u><h2 align="center">E-Book</h2></u><br>
-            <div align="center" style="margin-left:25px;">
-                <div class="float_l ebuk">
-                    <img src="<?=base_url()?>assets/img/book1.png"/>
-                    <br><button class="btn btn-success">Download</button>
-                </div>
-                <div class="float_l ebuk">
-                    <img src="<?=base_url()?>assets/img/book2.png" />
-                    <br><button class="btn btn-success">Download</button>
-                </div>
-                <div class="float_l ebuk">
-                    <img src="<?=base_url()?>assets/img/book3.png" />
-                    <br><button class="btn btn-success">Download</button>
-                </div>
-                <div class="float_l ebuk">
-                    <img src="<?=base_url()?>assets/img/book4.png"/>
-                    <br><button class="btn btn-success">Download</button>
-                </div>
-                <div class="float_l ebuk">
-                    <img src="<?=base_url()?>assets/img/book5.png"/>
-                    <br><button class="btn btn-success">Download</button>
-                </div>
-            </div>
-        </div>
     </div>
+	
+	
     <div class="row">
         <div class="col-md-12">
             <div class="modal fade" id="urutan" role="dialog">

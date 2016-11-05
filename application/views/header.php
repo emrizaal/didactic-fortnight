@@ -18,7 +18,7 @@
 
     <!-- Custom CSS -->
     <link href="<?=base_url()?>assets/css/scrolling-nav.css" rel="stylesheet">
-
+	<link href="<?php echo base_url('assets/vendor/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
 
     <link href="<?=base_url()?>assets/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
 
