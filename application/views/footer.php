@@ -54,18 +54,18 @@
             defaultDate: '2016-01-01',
             editable: true,
             eventLimit: true, // allow "more" link when too many events
-            events: <?php print json_encode($tgl)?>,
-			eventClick: function() {
-				// change the border color just for fun
-				$("#myModal").modal("show");
-			},
-			
+            events: <?php print json_encode($tgl); ?>,
+			eventClick:  function(event, jsEvent, view) {
+				$('#modalTitle').html(event.title);
+				$('#modalBody').html(event.description);
+				$('#eventUrl').attr('href',event.url);
+				$('#fullCalModal').modal();
+			}
         });
-
+		
     });
 	
 	
-
 </script>
 
 <script src="<?=base_url()?>assets/datatables/media/js/jquery.dataTables.min.js"></script>

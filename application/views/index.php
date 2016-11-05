@@ -107,12 +107,22 @@ include "header.php";
             <div class="col-lg-9">
                 <div id='calendar'></div>
             </div>
-			<div id="myModal" class="modal">
-			  <!-- Modal content -->
-			  <div class="modal-content">
-				<span class="close">x</span>
-				<p>Some text in the Modal..</p>
-			  </div>
+			<div id="fullCalModal" class="modal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+							<h4 id="modalTitle" class="modal-title"></h4>
+						</div>
+						<div id="modalBody" class="modal-body">
+							Deskripsi Event
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<a id="eventUrl" target="_blank" class="btn btn-primary">Event Page</a>
+						</div>
+					</div>
+				</div>
 			</div>
 			
         </div>
