@@ -37,10 +37,13 @@
 <script src='<?=base_url()?>assets/lib/moment.min.js'></script>
 
 <script src='<?=base_url()?>assets/js/fullcalendar.min.js'></script>
+
 <script>
 
+//FOR CALENDAR
+	
     $(document).ready(function() {
-
+		
         $('#calendar').fullCalendar({
             theme: true,
             header: {
@@ -53,10 +56,11 @@
             eventLimit: true, // allow "more" link when too many events
             events: <?php print json_encode($tgl)?>,
 			eventClick: function() {
-				alert('a day has been clicked!');
-			}
+				// change the border color just for fun
+				$("#myModal").modal("show");
+			},
+			
         });
-		
 
     });
 	

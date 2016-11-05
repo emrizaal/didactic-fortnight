@@ -107,6 +107,14 @@ include "header.php";
             <div class="col-lg-9">
                 <div id='calendar'></div>
             </div>
+			<div id="myModal" class="modal">
+			  <!-- Modal content -->
+			  <div class="modal-content">
+				<span class="close">x</span>
+				<p>Some text in the Modal..</p>
+			  </div>
+			</div>
+			
         </div>
     </div>
 </section>
