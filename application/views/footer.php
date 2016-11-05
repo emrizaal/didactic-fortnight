@@ -51,10 +51,16 @@
             defaultDate: '2016-01-01',
             editable: true,
             eventLimit: true, // allow "more" link when too many events
-            events: <?php print json_encode($tgl)?>
+            events: <?php print json_encode($tgl)?>,
+			eventClick: function() {
+				alert('a day has been clicked!');
+			}
         });
+		
 
     });
+	
+	
 
 </script>
 

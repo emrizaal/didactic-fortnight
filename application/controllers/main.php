@@ -55,4 +55,6 @@ class main extends CI_Controller {
 		$this->load->view("v_materi",$data);
 	}
 	
+	
+	
 }
