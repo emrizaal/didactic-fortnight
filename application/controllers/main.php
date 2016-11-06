@@ -3,12 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Main extends CI_Controller {
 
-	public function main(){ //Apapun yg ada dalam method ini dieksekusi ketika controller Main dipanggil
-		parent::__construct();
-
-		$this->load->model("m_main"); // Memanggil model "m_main"
-	}
-
 	public function index(){
 		$tgl = $this->m_main->getTanggal();
 		$new = array();

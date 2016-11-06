@@ -2,10 +2,6 @@
 
 class M_main extends CI_Model {
 
-	function m_main(){
-		parent::__construct();
-	}
-
 	function getTanggal(){
 		$query = $this->db->query("SELECT tanggal from materi group by tanggal")->result_array();
 		return $query;
