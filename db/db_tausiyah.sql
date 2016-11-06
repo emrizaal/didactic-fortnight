@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 03, 2016 at 11:39 AM
+-- Generation Time: Nov 06, 2016 at 06:21 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -41,6 +41,19 @@ INSERT INTO `admin` (`username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ebook`
+--
+
+CREATE TABLE IF NOT EXISTS `ebook` (
+  `id_ebook` int(11) NOT NULL AUTO_INCREMENT,
+  `judul` text NOT NULL,
+  `deskripsi` text NOT NULL,
+  PRIMARY KEY (`id_ebook`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `materi`
 --
 
@@ -49,10 +62,8 @@ CREATE TABLE IF NOT EXISTS `materi` (
   `judul` varchar(128) NOT NULL,
   `ustadz` varchar(128) NOT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `preview` text NOT NULL,
   `isi` text NOT NULL,
-  `sumber` text NOT NULL,
-  `urutan_tampil` int(2) NOT NULL,
+  `gambar` text NOT NULL,
   PRIMARY KEY (`id_materi`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
@@ -60,12 +71,39 @@ CREATE TABLE IF NOT EXISTS `materi` (
 -- Dumping data for table `materi`
 --
 
-INSERT INTO `materi` (`id_materi`, `judul`, `ustadz`, `tanggal`, `preview`, `isi`, `sumber`, `urutan_tampil`) VALUES
-(1, 'Berbakti Kepada Ortu yang telah Wafat', 'Dr. Aam Amiruddin', '2016-01-11 02:05:18', 'Ustadz , saya merasa selama ini belum berbakti pada kedua orang tua. Padahal mereka sudah meninggal dunia. Bagimana caranya agar saya bisa berbakti kepada mereka? Apa saja amalan yang dapat dilakukan agar saya dapat membalas kebaikan mereka? JAWAB : Diakui, berbakti kepada orang tua merupakan salah satu amal yang paling dicintai Allah. Telah berkata Abdullah bin Mas’ud r.a. Aku berta.....', 'Ustadz , saya merasa selama ini belum berbakti pada kedua orang tua. Padahal mereka sudah meninggal dunia. Bagimana caranya agar saya bisa berbakti kepada mereka? Apa saja amalan yang dapat dilakukan agar saya dapat membalas kebaikan mereka? JAWAB : Diakui, berbakti kepada orang tua merupakan salah satu amal yang paling dicintai Allah. Telah berkata Abdullah bin Mas’ud r.a. Aku berta.....', '', 40),
-(2, 'Tak Tahu Arah Kiblat Ketika Shalat', 'Dr. Aam Amiruddin', '2016-01-01 17:00:00', 'Ketika melakukan perjalanan ke sejumlah negara Eropa, saya menghadapi kesulitan dalam menentukan arah kiblat. Ke arah mana saya harus menghadap dalam keadaan seperti itu? Kalau ternyata arah kiblatnya salah, apakah shalatnya perlu diulangi? Nana, Cimahi, alina….@gmail.com JAWAB : Kiblat adalah titik yang menyatukan arah segenap umat Islam dalam melaksanakan shalat, tetapi titik arah itu sendiri..', 'Ketika melakukan perjalanan ke sejumlah negara Eropa, saya menghadapi kesulitan dalam menentukan arah kiblat. Ke arah mana saya harus menghadap dalam keadaan seperti itu? Kalau ternyata arah kiblatnya salah, apakah shalatnya perlu diulangi? Nana, Cimahi, alina….@gmail.com JAWAB : Kiblat adalah titik yang menyatukan arah segenap umat Islam dalam melaksanakan shalat, tetapi titik arah itu sendiri..', '', 2),
-(3, 'Hukum Memberi Ucapan Natal', 'Dr. Aam Amiruddin', '2016-01-01 17:00:00', 'Pak ustadz yang saya hormati, bagaimana hukumnya apabila kita mengucapkan selamat hari raya Natal kepada saudara saya yang memeluk agama Kristen. Apakah kita diperbolehkan menyampaikan ucapan selamat hari raya kepada pemeluk agama lain? Apabila kita juga ingin menyampaikannya melalui pesan singkat seperti SMS atau BBM, bagaimana hukumnya? Mohon penjelasannya. Terima kasih sebelumnya atas jawabannya. (Nunung, Sumedang)', 'Pak ustadz yang saya hormati, bagaimana hukumnya apabila kita mengucapkan selamat hari raya Natal kepada saudara saya yang memeluk agama Kristen. Apakah kita diperbolehkan menyampaikan ucapan selamat hari raya kepada pemeluk agama lain? Apabila kita juga ingin menyampaikannya melalui pesan singkat seperti SMS atau BBM, bagaimana hukumnya? Mohon penjelasannya. Terima kasih sebelumnya atas jawabannya. (Nunung, Sumedang)', '', 3),
-(4, 'Test2', 'Dr. Aam Amiruddin', '2016-01-04 17:00:00', 'Pak ustadz yang saya hormati, bagaimana hukumnya apabila kita mengucapkan selamat hari raya Natal kepada saudara saya yang memeluk agama Kristen. Apakah kita diperbolehkan menyampaikan ucapan selamat hari raya kepada pemeluk agama lain? Apabila kita juga ingin menyampaikannya melalui pesan singkat seperti SMS atau BBM, bagaimana hukumnya? Mohon penjelasannya. Terima kasih sebelumnya atas jawabannya. (Nunung, Sumedang)', 'Pak ustadz yang saya hormati, bagaimana hukumnya apabila kita mengucapkan selamat hari raya Natal kepada saudara saya yang memeluk agama Kristen. Apakah kita diperbolehkan menyampaikan ucapan selamat hari raya kepada pemeluk agama lain? Apabila kita juga ingin menyampaikannya melalui pesan singkat seperti SMS atau BBM, bagaimana hukumnya? Mohon penjelasannya. Terima kasih sebelumnya atas jawabannya. (Nunung, Sumedang)', '', 1),
-(5, 'test tanggal lain', 'Ustadz Rizal', '2016-01-17 17:00:00', 'Pak ustadz yang saya hormati, bagaimana hukumnya apabila kita mengucapkan selamat hari raya Natal kepada saudara saya yang memeluk agama Kristen. Apakah kita diperbolehkan menyampaikan ucapan selamat hari raya kepada pemeluk agama lain? Apabila kita juga ingin menyampaikannya melalui pesan singkat seperti SMS atau BBM, bagaimana hukumnya? Mohon penjelasannya. Terima kasih sebelumnya atas jawabannya. (Nunung, Sumedang)', '', '', 1);
+INSERT INTO `materi` (`id_materi`, `judul`, `ustadz`, `tanggal`, `isi`, `gambar`) VALUES
+(1, 'Berbakti Kepada Ortu yang telah Wafat', 'Dr. Aam Amiruddin', '2016-01-11 02:05:18', 'Ustadz , saya merasa selama ini belum berbakti pada kedua orang tua. Padahal mereka sudah meninggal dunia. Bagimana caranya agar saya bisa berbakti kepada mereka? Apa saja amalan yang dapat dilakukan agar saya dapat membalas kebaikan mereka? JAWAB : Diakui, berbakti kepada orang tua merupakan salah satu amal yang paling dicintai Allah. Telah berkata Abdullah bin Mas’ud r.a. Aku berta.....', ''),
+(2, 'Tak Tahu Arah Kiblat Ketika Shalat', 'Dr. Aam Amiruddin', '2016-01-01 17:00:00', 'Ketika melakukan perjalanan ke sejumlah negara Eropa, saya menghadapi kesulitan dalam menentukan arah kiblat. Ke arah mana saya harus menghadap dalam keadaan seperti itu? Kalau ternyata arah kiblatnya salah, apakah shalatnya perlu diulangi? Nana, Cimahi, alina….@gmail.com JAWAB : Kiblat adalah titik yang menyatukan arah segenap umat Islam dalam melaksanakan shalat, tetapi titik arah itu sendiri..', ''),
+(3, 'Hukum Memberi Ucapan Natal', 'Dr. Aam Amiruddin', '2016-01-01 17:00:00', 'Pak ustadz yang saya hormati, bagaimana hukumnya apabila kita mengucapkan selamat hari raya Natal kepada saudara saya yang memeluk agama Kristen. Apakah kita diperbolehkan menyampaikan ucapan selamat hari raya kepada pemeluk agama lain? Apabila kita juga ingin menyampaikannya melalui pesan singkat seperti SMS atau BBM, bagaimana hukumnya? Mohon penjelasannya. Terima kasih sebelumnya atas jawabannya. (Nunung, Sumedang)', ''),
+(4, 'Test2', 'Dr. Aam Amiruddin', '2016-01-04 17:00:00', 'Pak ustadz yang saya hormati, bagaimana hukumnya apabila kita mengucapkan selamat hari raya Natal kepada saudara saya yang memeluk agama Kristen. Apakah kita diperbolehkan menyampaikan ucapan selamat hari raya kepada pemeluk agama lain? Apabila kita juga ingin menyampaikannya melalui pesan singkat seperti SMS atau BBM, bagaimana hukumnya? Mohon penjelasannya. Terima kasih sebelumnya atas jawabannya. (Nunung, Sumedang)', ''),
+(5, 'test tanggal lain', 'Ustadz Rizal', '2016-01-17 17:00:00', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slider`
+--
+
+CREATE TABLE IF NOT EXISTS `slider` (
+  `id_slider` int(11) NOT NULL AUTO_INCREMENT,
+  `gambar` text NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id_slider`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ustadz`
+--
+
+CREATE TABLE IF NOT EXISTS `ustadz` (
+  `id_ustadz` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(255) NOT NULL,
+  `profil` text NOT NULL,
+  `foto` text NOT NULL,
+  PRIMARY KEY (`id_ustadz`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
