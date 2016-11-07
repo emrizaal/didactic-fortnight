@@ -28,6 +28,9 @@ include "header.php";
                         <a class="page-scroll" href="#jadwal">Jadwal</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#ebook">E-Book</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#materi">Tausiyah</a>
                     </li>
                     <li>

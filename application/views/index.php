@@ -130,7 +130,7 @@ include "header.php";
 </section>
 
 <!-- Services Section -->
-<section id="materi" class="services-section-book">
+<section id="ebook" class="services-section-book" style="padding-top:70px;">
 	<div class="container">
 	<div class="row">
 	 <div class="col-md-12">
@@ -207,17 +207,18 @@ include "header.php";
 					</div>
                 </div>
 			<?php } ?>	
-				
+				<button class="btn btn-success">Lihat Koleksi E-Book Lainnya</button>
             </div>
         </div>
 	 </div>
 	</div>
 </section>
 
-<section class="services-section-materi">
+<section id="materi" class="services-section-materi">
     <div class="container" align="left">
         <div class="row">
             <div class="col-md-12">
+			<h1 class="text-center" style="margin-bottom: 60px;"> Materi Tausiyah </h1>
             <!--
                 <div>
                     <img src="<?//=base_url()?>assets/img/natal.jpg" class="float_l img_materi">
@@ -273,6 +274,7 @@ include "header.php";
                       <li value="3"><a>3</a></li>
                       <li value="4"><a>4</a></li>
                       <li value="5"><a>5</a></li>
+					  <button class="btn btn-default">Lihat Selengkapnya ></button>
                   </ul>
               </div>
           </div>
