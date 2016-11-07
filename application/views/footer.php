@@ -12,7 +12,8 @@
 			<div class="col-md-3">
 				<i class="glyphicon glyphicon-phone-alt" style="font-size: 20px; margin-bottom: 10px"></i><br>
 				Telp  : 08723618xxxx<br>
-				E-Mail: emrizal21@gmail.com
+				E-Mail: emrizal21@gmail.com<br><br>
+				<a href="#" title="facebook"><i class="fa fa-facebook fa-lg"></i></a>&emsp;<a href="#" title="twitter"><i class="fa fa-twitter fa-lg"></i></a>
 			</div>
 			<div class="col-md-4">
 				Didukung oleh:<br><br>
