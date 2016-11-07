@@ -51,8 +51,8 @@
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
             },
-            defaultDate: '2016-01-01',
-            editable: true,
+            //defaultDate: '2016-01-01',
+            editable: false,
             eventLimit: true, // allow "more" link when too many events
             events: <?php print json_encode($tgl); ?>,
 			eventClick:  function(event, jsEvent, view) {
@@ -60,14 +60,63 @@
 				$('#modalBody').html(event.description);
 				$('#eventUrl').attr('href',event.url);
 				$('#fullCalModal').modal();
+			},
+			eventMouseover: function(event){
+				$(this).css('cursor','pointer');
+				$(this).css('background-color','limegreen');
+			},
+			eventMouseout: function(event){
+				$(this).css('background-color','#337ab7');
 			}
         });
+		
+		
+		
 		
     });
 	
 	
 </script>
+<script>
+	
+	function call_modal(a){
+			//alert(a);
+			// Get the modal
+			var modal = document.getElementById('ebookModal-'+a);
+			
+			// Get the button that opens the modal
+			var btn = document.getElementById("r-ebook-"+a);
+			
+			//modal.style.display = "block";
+			$('#ebookModal-'+a).modal();
+			
+			// Get the <span> element that closes the modal
 
+			// When the user clicks on the button, open the modal
+			//btn.onclick = function() {
+				//modal.style.display = "block";
+			//	$('#ebookModal-'+a'').modal();
+			//}
+		}
+		
+	function close_modal(a){
+		var modal = document.getElementById('ebookModal-'+a);
+		//var span = document.getElementsByClassName("close-modal");
+
+		// When the user clicks on <span> (x), close the modal
+		//span.onclick = function() {
+			modal.style.display = "none";
+		//}
+	}		
+		
+
+		// When the user clicks anywhere outside of the modal, close it
+		//window.onclick = function(event) {
+		//	if (event.target == modal) {
+		//		modal.style.display = "none";
+		//	}
+		//}
+</script>
 <script src="<?=base_url()?>assets/datatables/media/js/jquery.dataTables.min.js"></script>
 <script src="<?=base_url()?>assets/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 

@@ -136,66 +136,77 @@ include "header.php";
 	 <div class="col-md-12">
             <h2 align="center">E-Book</h2><br>
             <div align="center" style="margin-left:25px;">
-                <div class="float_l ebuk">
-                    <table>
-						<tr>
-							<td><img src="<?=base_url()?>assets/img/book1.png"/></td>
-						<tr>
-						</tr>
-							<td><button class="btn btn-success">Download</button></td>
-						</tr>
-					</table>
+			<?php for($i=0; $i<4; $i++){ ?>
+                <div class="float_l ebuk col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Judul Buku <?php echo $i+1; ?></h3>
+						</div>
+						<div class="panel-body" style="padding: 15px 20px;">
+							<img src="<?=base_url()?>assets/img/book<?php echo $i+1; ?>.png"/>
+							<p id="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id placerat est. Nam vulputate, mauris quis vulputate rhoncus, metus risus pretium tortor, sed condimentum enim quam et nibh.</p>
+							<br><span style="text-align: center;"><button class="btn btn-primary" id="r-ebook-<?php echo $i+1;?>" onclick="call_modal(<?php echo $i+1; ?>)">See More</button></span>
+						</div>
+                    </div>
+					
+					<div id="ebookModal-<?php echo $i+1;?>" class="modal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									
+									<!--<button type="button" data-dismiss="modal"><span aria-hidden="true" onclick="close_modal(<?php// echo $i+1; ?>)">×</span> <span class="sr-only">close</span></button>-->
+									<button type="button" class="close" data-dismiss="modal" onclick="close_modal(<?php echo $i+1; ?>)"><span aria-hidden="true" onclick="close_modal(<?php echo $i+1; ?>)">×</span> <span class="sr-only">close</span></button>
+									<h4 id="modaleTitle" class="modal-title">Judul Buku</h4>
+								</div>
+								<div id="modaleBody" class="modal-body">
+									<table>
+										<tr>
+											<td style="text-align: left; width:20%; padding: 0px 20px;"><img src="<?=base_url()?>assets/img/book<?php echo $i+1; ?>.png"/></td>
+											<td style="text-align: justify; width:70%; padding: 0px 20px 0px 10px" valign="top">
+												<p style="text-align: justify">
+													<table>
+														<tr>
+															<th>Judul Buku </th>
+															<td>&nbsp;:&nbsp;</td>
+															<td> Judul</td>
+															<td>&emsp;&emsp;&emsp;&emsp;&emsp; </td>
+														</tr>
+														<tr>
+															<th>Tanggal Rilis </th>
+															<td>&nbsp;:&nbsp;</td>
+															<td> dd-mm-yyyy</td>
+															<td> </td>
+														</tr>
+														<tr>
+															<th>Penulis </th>
+															<td>&nbsp;:&nbsp;</td>
+															<td> Nama Penulis</td>
+															<td> </td>
+														</tr>
+														<tr>
+															<th>Sinopsis </th>
+															<td>&nbsp;:&nbsp;</td>
+															<td> </td><td> </td>
+														</tr>
+														<tr>
+															<td colspan="4"> Sinopsis Buku. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id placerat est. Nam vulputate, mauris quis vulputate rhoncus, metus risus pretium tortor, sed condimentum enim quam et nibh.
+															</td>
+														</tr>
+													</table>
+												</p>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-success">Download</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal" onclick="close_modal(<?php echo $i+1; ?>)">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
                 </div>
-                <div class="float_l ebuk">
-                    <table>
-						<tr>
-							<td><img src="<?=base_url()?>assets/img/book2.png"/></td>
-						<tr>
-						</tr>
-							<td><button class="btn btn-success">Download</button></td>
-						</tr>
-					</table>
-                </div>
-                <div class="float_l ebuk">
-                    <table>
-						<tr>
-							<td><img src="<?=base_url()?>assets/img/book3.png"/></td>
-						<tr>
-						</tr>
-							<td><button class="btn btn-success">Download</button></td>
-						</tr>
-					</table>
-                </div>
-                <div class="float_l ebuk">
-                    <table>
-						<tr>
-							<td><img src="<?=base_url()?>assets/img/book4.png"/></td>
-						<tr>
-						</tr>
-							<td><button class="btn btn-success">Download</button></td>
-						</tr>
-					</table>
-                </div>
-                <div class="float_l ebuk">
-                    <table>
-						<tr>
-							<td><img src="<?=base_url()?>assets/img/book5.png"/></td>
-						<tr>
-						</tr>
-							<td><button class="btn btn-success">Download</button></td>
-						</tr>
-					</table>
-                </div>
-                <div class="float_l ebuk">
-                    <table>
-						<tr>
-							<td><img src="<?=base_url()?>assets/img/book1.png"/></td>
-						<tr>
-						</tr>
-							<td><button class="btn btn-success">Download</button></td>
-						</tr>
-					</table>
-                </div>
+			<?php } ?>	
 				
             </div>
         </div>
