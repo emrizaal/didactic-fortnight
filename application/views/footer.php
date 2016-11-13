@@ -1,7 +1,7 @@
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
     <div class="container">
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding: 10px 0px 30px 0px">
             <div class="col-md-2">
                 <img src="<?=base_url()?>assets/img/logo.png">
             </div>
@@ -16,14 +16,15 @@
 				<a href="#" title="facebook"><i class="fa fa-facebook fa-lg"></i></a>&emsp;<a href="#" title="twitter"><i class="fa fa-twitter fa-lg"></i></a>
 			</div>
 			<div class="col-md-4">
-				Didukung oleh:<br><br>
-				<img src="<?=base_url()?>assets/img/logo_assalam.png" height="70px" title="Assalam POLBAN" />&emsp;<img src="<?=base_url()?>assets/img/polban.png" height="75px" title="POLBAN" />&emsp;<img src="<?=base_url()?>assets/img/ruki.png" height="70px" title="Ruki">
+				Didukung oleh:<br>
+				<h1>Harmoni</h1>
+				<!--<img src="<?=base_url()?>assets/img/logo_assalam.png" height="70px" title="Assalam POLBAN" />&emsp;<img src="<?=base_url()?>assets/img/polban.png" height="75px" title="POLBAN" />&emsp;<img src="<?=base_url()?>assets/img/ruki.png" height="70px" title="Ruki">-->
 			</div>
         </div>
-		<div class="col-md-12" style="margin-top: 20px;">
-			
-		</div>
     </div>
+		<div class="col-md-12" style="padding: 20px 0px 20px 0px; background-color: #111111">
+			Copyright &copy; 2016 DKM Lukmanul Hakim. All Rights Reserved
+		</div>
 </section>
 
 <!-- jQuery -->
